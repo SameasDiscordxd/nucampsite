@@ -17,20 +17,28 @@
 </head>
 
 
-
-    <header class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <img src="img/logo.png" class="img-fluid" />
-                </div>
-                <div class="col">
-            <h1>Nucamp</h1>
-            <h2>a better way to camp</h2>
-                </div>
+<!-- Start of the jumbotron -->
+<header class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                <img src="img/logo.png" class="img-fluid" />
             </div>
+            <div class="col">
+                <h1>Nucamp</h1>
+                <h2>a better way to camp</h2>
+            </div>
+            <!-- New button column -->
+            <div class="col-md-4 col-xl-2 mt-4">
+                <a href="#reserveForm" class="btn btn-lg btn-info text-nowrap" role="button">Reserve Campsite</a>
+            </div>
+            <!-- End of new button column -->
         </div>
-    </header>
+    </div>
+</header>
+<!-- End of the jumbotron -->
+
+
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
@@ -70,13 +78,22 @@
         </div>
 
 
-    <div class="row row-content align-items-center">
-        <div class="col-sm-4 col-md-3">
-        <h2>Featured Campsites</h2>
-        <h3>React Lake Campground</h3>
-        <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-3">
+                <h2>Featured Campsites</h2>
+            </div>
+            <div class="col">
+                <div class="media">
+                    <div class="media-body align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                    <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/react-lake-thumb.jpg" alt="React Lake thumbnail" />
+                </div>
+            </div>
         </div>
-    </div>
+
+
 
 
 
@@ -94,11 +111,47 @@
                 </div>
             </div>
         </div>
+        <div class="row row-content">
+            <div class="col-sm-12 col-md-6 mx-auto">
+                <div class="card">
+                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                    <div class="card-body">
+                        <form id="reserveForm">
+                            <div class="form-group row">
+                                <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control" id="numCampers" name="numCampers">
+                                        <option>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="date" class="col-sm-6 col-form-label">Date</label>
+                                <div class="col-sm-6">
+                                    <input type="date" class="form-control" id="date" name="date" placeholder="MM/DD/YYYY">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 <footer class="site-footer">
     <div class="container">
-        <div class="row">             
+        <div class="row">
             <div class="col-4 col-sm-2 offset-1">
                 <h5>Links</h5>
                 <ul class="list-unstyled">
@@ -119,7 +172,7 @@
             <div class="col-sm-4 text-center">
                 <a role="button" class="btn btn-link" href="tel +12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br>
                 <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
-            </div>                
+            </div>
     </div>
     </div>
 </footer>
